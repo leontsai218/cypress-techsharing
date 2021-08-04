@@ -6,7 +6,7 @@
     "scripts": {
         "frontend:build": "cd app && npm install && npm run build && cd -",
         "cy:open": "cypress open",
-        "cy:run": "cypress run --browser firefox:dev",
+        "cy:run": "cypress run",
         "start:backend": "gradle bootRun"
     },
     "author": "Leon Tsai",
