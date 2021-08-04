@@ -50,8 +50,12 @@ jobs:
           java-version: 16
           distribution: 'zulu'
           architecture: x64
+      - name: Build back-end
+        run: ./gradlew bootrun
       - name: Build frontend
         uses: actions/setup-node@v2
         with:
           node-version: "16"
       - run: npm run frontend:build
+      - name: Cypress Test
+        run: npm cy:run
